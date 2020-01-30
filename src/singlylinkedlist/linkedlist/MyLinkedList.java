@@ -38,6 +38,30 @@ public class MyLinkedList {
         }
         return response;
     }
+    //delete from last
+    public Node deleteFromlast(){
+        Node response=null;
+        if(head!=null){
+            Node temp=head;
+            Node previous=null;
+            while (temp.getNext()!=null){
+                previous=temp;
+                temp =temp.getNext();
+            }
+            if(previous!=null){
+                response =previous.getNext();
+                previous.setNext(null);
+            }
+            else{
+                response=head;
+                head=null;
+            }
+        }
+        else{
+            System.out.println("Empty");
+        }
+        return response;
+    }
     //traverse
     public void printList(){
         System.out.println("Printing the list :");

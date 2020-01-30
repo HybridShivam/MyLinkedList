@@ -12,13 +12,18 @@ public class Implementation {
         linkedList.insertAtBeginning(800);
         linkedList.insertAtBeginning(1600);
         linkedList.printList();
-        Node delete=linkedList.deleteFromBeginning();
+        deleteForMe(linkedList.deleteFromlast());
+        linkedList.printList();
+        deleteForMe(linkedList.deleteFromBeginning());
+        linkedList.printList();
+
+    }
+    public static void deleteForMe(Node delete){
         if(delete!=null){
             System.out.println("Deleted data : "+delete.getData());
         }
         else{
             System.out.println("Empty List");
         }
-        linkedList.printList();
     }
 }
