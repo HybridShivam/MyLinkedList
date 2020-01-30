@@ -29,6 +29,15 @@ public class MyLinkedList {
         node.setNext(head);
         head=node;
     }
+    //delete from beginning
+    public Node deleteFromBeginning(){
+        Node response=null;
+        response=head;
+        if(head!=null){
+            head=head.getNext();
+        }
+        return response;
+    }
     //traverse
     public void printList(){
         System.out.println("Printing the list :");
@@ -40,6 +49,7 @@ public class MyLinkedList {
                 System.out.print("-->");
             }
         }
+        System.out.println();
     }
 
 }
