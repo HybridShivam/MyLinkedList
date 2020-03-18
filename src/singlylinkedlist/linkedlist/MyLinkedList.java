@@ -49,7 +49,8 @@ public class MyLinkedList {
                 temp =temp.getNext();
             }
             if(previous!=null){
-                response =previous.getNext();
+                //response =previous.getNext();
+                response=temp;
                 previous.setNext(null);
             }
             else{
@@ -75,5 +76,6 @@ public class MyLinkedList {
         }
         System.out.println();
     }
+
 
 }
